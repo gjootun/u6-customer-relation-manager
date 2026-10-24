@@ -1,0 +1,17 @@
+<%# Partial: displays ONE customer as a Bulma card.
+    `customer` is the local variable passed in by render. %>
+<div class="column is-one-quarter">
+  <div class="card">
+    <div class="card-content">
+      <p class="title is-5"><%= customer.full_name %></p>
+
+      <%# Only show the image if one was uploaded. %>
+      <% if customer.image.attached? %>
+        <%= image_tag customer.image, class: "customer-image" %>
+      <% end %>
+
+      <p><%= customer.phone_number %></p>
+      <p><%= customer.email_address %></p>
+    </div>
+  </div>
+</div>

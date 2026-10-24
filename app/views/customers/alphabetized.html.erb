@@ -1,0 +1,9 @@
+<%# Alphabetized view: same layout, @customers is sorted by name. %>
+<h1 class="title">Customers A-Z</h1>
+
+<%= link_to "All", root_path %> |
+<%= link_to "Missing Email", customers_missing_email_path %>
+
+<div class="columns is-multiline">
+  <%= render partial: "customer", collection: @customers %>
+</div>

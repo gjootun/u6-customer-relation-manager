@@ -1,0 +1,9 @@
+<%# Missing email view: only customers with no email address. %>
+<h1 class="title">Customers Missing Email</h1>
+
+<%= link_to "All", root_path %> |
+<%= link_to "Alphabetized", customers_alphabetized_path %>
+
+<div class="columns is-multiline">
+  <%= render partial: "customer", collection: @customers %>
+</div>

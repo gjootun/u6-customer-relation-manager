@@ -1,0 +1,6 @@
+// Keeps customer images a consistent size inside the cards.
+.customer-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;  // crops instead of stretching
+}

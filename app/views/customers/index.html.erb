@@ -1,0 +1,10 @@
+<%# Index view: lists all customers, with links to the other two views. %>
+<h1 class="title">All Customers</h1>
+
+<%= link_to "Alphabetized", customers_alphabetized_path %> |
+<%= link_to "Missing Email", customers_missing_email_path %>
+
+<div class="columns is-multiline">
+  <%# Renders _customer.html.erb once per customer. %>
+  <%= render partial: "customer", collection: @customers %>
+</div>
